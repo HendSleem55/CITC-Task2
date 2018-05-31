@@ -1,0 +1,56 @@
+<app-header></app-header>
+<section class="container py-5 generateExam">
+  <div class="row mb-5">
+    <div class="col-6 offset-3 text-center">
+      <h1 translate>Generate a test easliy</h1>
+      <hr>
+      <p translate>Now you can create a new exam with random questions from question bank</p>
+      <button class="secondary_button font-weight-bold" (click)="generateexam()" translate>Generate Test<i class="fas fa-plus pl-3"></i></button>
+    </div>
+  </div>
+
+
+    <alert type="success" id="test" class="">
+        Your Exam had been succeefully added to online exams 
+    </alert>   
+  
+    <div class="row createdExam">
+      <div class="col-12" *ngFor = "let q of questionstogenerate">
+        <div class="card mb-5 mx-3">
+            <div class="card-header bg-transparent  "> 
+                <h3 class="Qheader"> <p translate>{{q.questionHeader}} </h3>
+                </div>
+            <div class="card-body">
+                <h5 class="card-title Qheader" translate>Answers :</h5>            
+                <ul class="card-text">
+                      <li>{{q.answer1}}</li>
+                      <li>{{q.answer2}}</li>
+                      <li>{{q.answer3}}</li>
+                  </ul>
+            </div>
+            <div class="card-footer bg-transparent  d-flex justify-content-between"> 
+                <h6 class="text-success" translate>Correct answer number:<h6 class="d-inline"> {{q.correctanswer}}</h6> </h6>
+                <div class="Edit"> <a href="" translate>Edit</a> <a href=""class="px-3" translate>Delete</a></div>
+              </div>      
+          </div>
+
+      </div>
+      <div class="container">
+          <div class="row subitbutton" >
+              <div class="col-12 text-center">
+                <button class="secondary_button" (click)="submitExam()" translate>Submit</button>
+              </div>
+            </div>
+        </div>   
+     
+    
+    
+      </div>
+
+
+  
+      
+
+</section>
+
+

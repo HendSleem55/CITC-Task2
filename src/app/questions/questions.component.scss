@@ -1,0 +1,44 @@
+.questions{
+    background-color: rgba($color: #f7f7f7, $alpha: .7);
+    margin-bottom: 50px;
+    box-shadow: 0px 3px 10px 4px rgba(0, 0, 0, 0.15);
+
+}
+
+.Qheader{
+    color: #464A52;
+}
+
+.Qanswers {
+    color: #464A52;
+}
+
+
+li {
+    list-style-type: none
+}
+
+.Edit p{
+    color: gray;
+    font-weight: bold;
+}
+
+.Edit p:hover {
+    color: #0DBF79;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text-success  {
+    color:#0DBF79 !important;
+    font-weight: bold;
+}
+
+.card-header {
+    background-color:#666565 !important ;
+    h3{
+        color: white;
+    }
+
+}
+

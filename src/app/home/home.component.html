@@ -1,0 +1,163 @@
+<app-header></app-header>
+<section class="headerSlider mb-5">
+    <ngb-carousel *ngIf="images">
+            <ng-template ngbSlide>
+                <img [src]="images[0]" alt="Random first slide">
+                <div class="carousel-caption">
+            
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <img [src]="images[1]"  alt="Ransdom second slide">
+                <div class="carousel-caption">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <img [src]="images[2]" alt="Random third slide">
+                <div class="carousel-caption">
+                </div>
+            </ng-template>
+        </ngb-carousel>
+</section>
+
+<section class="entity container py-5">
+    <div class="row py-5 mb-5">
+        <div class="col-3"  (click)="hideYears()">
+            <i class="fas fa-users fa-4x mb-4"></i>
+            <h4 translate> Our Stuff</h4>
+        </div>
+
+        <div class="col-3 middle"  (click)="hideYears()">
+            <i class="fas fa-book fa-4x mb-4"></i>
+            <h4 translate>Our Courses</h4>
+
+        </div> 
+        <div class="col-3 border-right" (click)="hideYears()" (click)="gotoquestion()">
+            <i class="fas fa-question-circle fa-4x mb-4"></i>
+            <h4 translate>Question Bank</h4>
+        </div>
+
+        <div class="col-3 " (click)="showYears()">
+                <i class="fas fa-graduation-cap fa-4x mb-4"></i>
+                <h4 translate>Study Years</h4>
+            </div>
+    </div>
+
+    <div class="row Filter">
+        <div class="col-12 text-center">
+            <h4>Online exams for diffrent study years</h4>
+            <hr>
+        </div>
+        <div class="form-group col-6 offset-3">
+            <label class="control-label" for="University">University:</label>
+            <select *ngIf="getUniversities()" [(ngModel)]="selectedUniversity"(change)="onSelectUniversty($event.target.value)" class="form-control input-lg" id="University"
+                >
+                <option value="0">Select University</option>
+                <option *ngFor="let University of getUniversities()" value= {{University.id}}>{{University.name}}</option>
+            </select>
+            </div>
+            
+            <div class="form-group  col-6 offset-3">
+            <label class="control-label" for="Faculty">Faculties:</label>
+            <select *ngIf="Faculties" [(ngModel)]="selectedFaculty" (change)="onSelectFaculty($event.target.value)" class="form-control input-lg" id="Faculty">
+                <option value="0">Select Faculty</option>
+                <option *ngFor="let Faculty of Faculties" value= {{Faculty.id}}>{{Faculty.name}}</option>
+            </select>
+            </div>
+            
+            <div class="form-group col-6 offset-3 mb-5">
+            <label class="control-label" for="City">Study Year:</label>
+            <select class="form-control input-lg" id="StudyYear">
+                <option *ngIf="!selectedFaculty" value="0">Select Study Year</option>
+                <option *ngFor="let StudyYear of StudyYears" value={{StudyYear.id}}> {{StudyYear.name}}</option>
+            </select>
+        </div>
+
+        <div class="form-group col-12 text-center">
+            <button class="primary_button" (click)="StudyYearsExams()"> View results</button>
+        </div>
+</div>
+
+
+
+
+
+
+
+</section>
+
+
+
+<section class="container-fluid mb-5 py-5 news">
+        <div class="row">
+            <div class=" col-lg-8 col-12">
+                <div class="newsTitle py-3 mb-4 text-center font-weight-bold" id="news" translate>News</div>
+                <div class="row">
+                    <div class=" col-sm-6 col-12 text-center topCard">
+                        <div class="card"> 
+                            <img class="card-img-top  img-fluid" src="./assets/imgs/news2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">The first 3 ideal teacher for the month</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <button class="primary_button" translate>See More</button>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class=" col-12 col-sm-6  text-center topCard">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="./assets/imgs/news3.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">The first 3 ideal teacher for the month</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <button class="primary_button" translate>See More</button>
+                                </div>
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+
+      
+             <div class="col-12 col-lg-4">
+                <div class="eventsTitle py-3 mb-4 text-center font-weight-bold" translate>Events</div>
+                <div class="row">
+                    <div class="event px-3 pb-2 col-lg-12 col-md-6">
+                        <section  class="p-3">
+                            <h6>Lorem, ipsum dolor.</h6>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        </section>
+            
+                    </div>                    
+                            
+                    <div class="event px-3 py-2 col-lg-12 col-md-6">
+                            <section  class="p-3">
+                                <h6>Lorem, ipsum dolor.</h6>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                            </section>
+                    </div>                    
+    
+                    <div class="event px-3 py-2 col-lg-12 col-md-6">
+                        <section class="p-3" >
+                            <h6>Lorem, ipsum dolor.</h6>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        </section>
+                    </div>
+
+                    <div class="event px-3 py-2 col-lg-12 col-md-6">
+                        <section class="p-3">
+                            <h6>Lorem, ipsum dolor.</h6>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        </section>
+                    </div>
+                    
+                    <div class="col-12 text-center py-3" >
+                        <button class="primary_button" translate>See More</button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+

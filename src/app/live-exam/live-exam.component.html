@@ -1,0 +1,41 @@
+
+<app-header></app-header>
+<div class="container">
+
+<section class="container pt-5 OnlineExam">
+  
+    <div class="card border-0">
+        <div class="card-header font-weight-bold d-flex align-items-center justify-content-between">
+          <div>
+              <p translate>Course name :</p>
+              <p translate>Professor name :</p>
+          </div>
+
+          <div>
+           <p translate>Total grades: 60 grades</p> 
+           <p translate>Exam Duration : 2 hours</p>
+          </div>
+         
+        </div>
+    
+        <div class="card-body py-3">
+            <div class="row">
+                <div class="col-12 bg-light border-bottom-secondary" *ngFor="let question of currentExam">
+                  <h5>{{question["questionHeader"]}}</h5>
+                  <div class="answers">
+                      <div><input  class="form-check-input " type="radio" name="1" id="exampleRadios1" value="1" ><label>{{question["answer1"]}}</label></div>
+                      <div><input  class="form-check-input " type="radio" name="1" id="exampleRadios2" value="1" ><label >{{question["answer2"]}}</label></div>
+                      <div><input  class="form-check-input pl-3" type="radio" name="1" id="exampleRadios3" value="1" ><label >{{question["answer3"]}}</label></div> 
+                  </div>
+                  
+                </div>
+              </div>
+        </div>
+      </div>
+    
+    </section>
+  
+</div>
+
+
+    

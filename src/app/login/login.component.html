@@ -1,0 +1,32 @@
+<nav class="navbar justify-content-between py-3 ">
+    <div>
+        <img src="./assets/imgs/PIC.png" alt="">
+        <a class="navbar-brand font-weight-bold pl-3"><p class="mb-0">Communication and Information Technology Center</p></a>
+    </div>
+    <!-- <a class="p-3"(click)="switchLanguage()" tooltip="Switch Language"  placement="auto"> <i class=" fas fa-globe" ></i></a>  -->
+ </nav>
+
+<section class="login-body">
+    <section class="container">
+        <section class="row justify-content-between">
+        
+          <div class="col-6 offset-3 loginForm ">
+              <div class="col-12 mb-5 text-center">
+                <h1 translate>Account Login </h1>
+                <hr>
+                <!-- <p translate>Welcome Back! Login to access CTIC system  </p> -->
+              </div>
+            <form action="" name=" " [formGroup]="myform" (ngSubmit)="onSubmit()">
+              <input  type="text" name="user_name" formControlName = "userName" placeholder="user name" class="form-control mb-5" required>
+              <input type="password" name="pass_word" formControlName = "password" class="form-control mt-3 mb-2" placeholder=" passsword"  required> 
+              <input type="checkbox" name="rememberMe"> <label class="pl-2">  Remember Me</label>        
+              <alert type="danger" id="test" translate>Please fill all fields and try submitting again.</alert>
+              <div class="text-center mt-5">
+                <button type="submit" class="secondary_button mb-3" (click)="homepage()"translate>Login </button>
+              </div> 
+            </form> 
+                <p class="text-secondary text-center" translate>Did you <span translaten>forget your password? </span> </p>
+          </div>
+        </section>
+      </section>       
+</section>

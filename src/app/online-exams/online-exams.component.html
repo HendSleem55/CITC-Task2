@@ -1,0 +1,19 @@
+<app-header></app-header>
+<section class="container pt-5 onlineExams">
+    <div class="row">
+        <div class="col-6 offset-3 text-center ">
+          <h1 class="text-center" translate>System Online Exams</h1>
+          <hr>
+          <p translate>Here you can find all online exams creadted by you and others</p>
+        </div>
+      </div>
+  <section class="row exam">
+      <div class="col-3 mb-3 p-4  text-center" *ngFor="let x of myExams">
+         <div class="examCard p-5">
+            <h5 class="d-inline" translate>Exam Title:</h5>  <h5 class="d-inline"> {{x["value"]}}</h5>
+            <button class="primary_button font-weight-bold mt-3" (click)="drawExam(x['theExam'])" translate>View Exam</button> 
+         </div>
+        
+       </div>
+  </section>
+</section>

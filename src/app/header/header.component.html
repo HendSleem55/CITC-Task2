@@ -1,0 +1,25 @@
+<header>
+
+  <nav class="navbar justify-content-between py-3 ">
+      <div>
+          <img src="./assets/imgs/PIC.png" alt="" (click)="goTohome()">
+          <a class="navbar-brand font-weight-bold"><p class="pl-3 mb-0" translate>Communication and Information Technology Center</p></a>
+      </div>
+      <div>
+        <a class="p-3" tooltip="Profile"  placement="auto" > <i class=" fas fa-user-circle" ></i></a>
+        <a class="p-3 envelope" tooltip="E-meil"  placement="auto"><i class="fas fa-envelope "></i></a>
+        <a class="p-3 bell" tooltip="Notification"  placement="auto"><i class="fas fa-bell" ></i></a>          
+        <a class="p-3"  (click)="switchLanguage()" tooltip="Switch Language"  placement="auto"  > <i class=" fas fa-globe" ></i></a> 
+        <a class="p-3" (click)="logout()" tooltip="Sign Out"  placement="auto"><i class="fas fa-sign-out-alt"></i></a>
+      </div>
+    </nav>
+
+    <div class="text-center py-4">
+        <a class="px-3 py-2 " (click)="goTohome()" ><span translate>Home</span></a>
+        <a class="px-3 py-2 " (click)="goQuestionPage()" ><span translate>Question Bank</span></a>
+        <a class="px-3 py-2" (click)="goGenerateExam()" translate>Generta Exam</a>
+        <a class="px-3 py-2" (click)="goOnlineExams()" translate>Online Exams</a>
+        <a class="px-3 py-2"  translate>Detect Answers</a>
+    </div>
+  
+</header>
