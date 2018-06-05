@@ -26,6 +26,8 @@ import { NewQuestionFormComponent } from './new-question-form/new-question-form.
 import { OnlineExamsComponent } from './online-exams/online-exams.component';
 import { LiveExamComponent } from './live-exam/live-exam.component';
 import { StudyYearsExamsComponent } from './study-years-exams/study-years-exams.component';
+import { ModalModule } from 'ngx-bootstrap';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -77,7 +79,8 @@ const appRoutes: Routes = [
       }
     }),
     BrowserAnimationsModule,
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
 
     ],
   providers: [],

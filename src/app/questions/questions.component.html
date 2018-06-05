@@ -27,11 +27,20 @@
             </div>
             <div class="card-footer bg-transparent  d-flex justify-content-between"> 
               <h6 class="text-success" translate>Correct answer number:<h6 class="d-inline"> {{q.correctanswer}}</h6> </h6>
-              <div class="Edit d-flex"> <p>Edit</p> <p class="px-3" translate (click)="deleteFun(i)">Delete</p></div>
-            </div>
+              <div class="Edit d-flex"> <p translate>Edit</p> 
+                <p class="px-3" translate  (click)="openModal(template, i)">Delete</p></div>
+                <!-- <p class="px-3" translate (click)="deleteFun(i)">Delete</p></div> -->
+              </div>
         </div>
       </div>
     </div>  
   </section>
 </section>
 
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Do you want to delet this question?</p>
+    <button type="button" class="primary_button rounded-.5 px-3 mr-3" (click)="confirm()"  >Yes</button>
+    <button type="button" class="secondary_button rounded-.5 px-3 mr-3" (click)="decline()" >No</button>
+  </div>
+</ng-template>

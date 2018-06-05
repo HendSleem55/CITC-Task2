@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PathService } from '../path.service';
 
 @Component({
   selector: 'app-study-years-exams',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudyYearsExamsComponent implements OnInit {
 
-  constructor() { }
+  Path : object;
+
+  constructor(private pathservice :PathService) {
+
+    this.Path = pathservice.getPath();
+
+
+   }
 
   ngOnInit() {
   }
